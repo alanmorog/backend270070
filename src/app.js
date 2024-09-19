@@ -9,6 +9,14 @@ import mongoose from './config/database.js';
 import bodyParser from 'body-parser'
 import passport from 'passport'
 import initializePassport from './config/passport.config.js'
+import dotenv from "dotenv"
+
+
+
+
+dotenv.config({})
+
+
 
 const app = express();
 
@@ -28,7 +36,7 @@ app.use(session({
     secret: 'secretkey',
     resave: false,
     saveUninitialized: true,
-    store: MongoStore.create({ mongoUrl: 'mongodb+srv://alanmorog:Syncreon23@cluster0.rh6aq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0' })
+    store: MongoStore.create({ mongoUrl: process.env.MONGODB_URL })
 }));
 
 

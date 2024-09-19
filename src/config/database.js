@@ -1,6 +1,10 @@
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 
-mongoose.connect('mongodb+srv://alanmorog:Syncreon23@cluster0.rh6aq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
+
+dotenv.config({})
+
+mongoose.connect(process.env.MONGODB_URL)
 
 const db = mongoose.connection;
 
@@ -10,3 +14,6 @@ db.once('open', () => {
 });
 
 export default db;
+
+
+//coneccion con mongo

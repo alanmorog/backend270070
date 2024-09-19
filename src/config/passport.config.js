@@ -6,7 +6,7 @@ import { createHash, isValidPassword } from "../utils.js";
 
 const LocalStrategy = local.Strategy
 
-
+//estrategia de passport
 const initializePassport = () => {
     passport.use('register', new LocalStrategy({
         passReqToCallback: true, usernameField: 'email'
