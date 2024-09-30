@@ -1,5 +1,8 @@
 import { Router } from 'express';
 import User from '../models/user.model.js'
+import jwt from 'jsonwebtoken';
+import { authorization, passportCall, generateToken } from '../utils.js';
+import cookieParser from 'cookie-parser';
 
 import passport from 'passport';
 
@@ -19,7 +22,6 @@ router.get('/failregister', async (req, res) => {
 })
 
 router.post('/login', passport.authenticate('login', { failureRedirect: '/login' }), async (req, res) => {
-
     if (!req.user) return res.status(400).send({ status: "error", error: "credenciales invalidas" })
     req.session.user = {
         first_name: req.user.first_name,
@@ -39,4 +41,11 @@ router.post('/logout', (req, res) => {
         res.redirect('/login');
     });
 });
+
+
+router.get("/current", passportCall("jwt"), authorization('User'), (req, res) => {
+    res.send(req.user)
+});
+
+
 export default router
