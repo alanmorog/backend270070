@@ -34,11 +34,11 @@ Esta pre entrega se centra en lo visto en clase en el curso de programación bac
     
 ## Dependencias
 
-![Dependencias](./assets/screenshots/dependencias.png)
+![Dependencias](./assets/screenshots/dependencias.PNG)
 
 ## Filemap
 
-![three](./assets/screenshots/three.png)
+![three](./assets/screenshots/three.PNG)
 ## Roadmap
 
 - Se presentó de acuerdo a lo solicitado en la consigna, crear un modelo User el cual se obtendrá por conexión con Mongo los campos firts_name, last_name, email, age, password, cart y role.
@@ -60,20 +60,20 @@ Esta pre entrega se centra en lo visto en clase en el curso de programación bac
 
 ### login desde navegador
 
-![loginPage](./assets/screenshots/loginPage.png)
+![loginPage](./assets/screenshots/loginPage.PNG)
 
 ### usuarios desde mongo
 
-![mongoUser](./assets/screenshots/mongoUser.png)
+![mongoUser](./assets/screenshots/mongoUser.PNG)
 
 ### perfil desde navegador
 
-![profilePage](./assets/screenshots/profilePage.png)
+![profilePage](./assets/screenshots/profilePage.PNG)
 
 ### plogin desde postman con token
 
-![postmanLogin](./assets/screenshots/postmanLogin.png)
+![postmanLogin](./assets/screenshots/postmanLogin.PNG)
 
 ### current desde postman con token
 
-![postmanLogin](./assets/screenshots/postmanCurrent.png)
+![postmanLogin](./assets/screenshots/postmanCurrent.PNG)
